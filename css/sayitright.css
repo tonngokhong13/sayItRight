@@ -1,0 +1,126 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  color: blue ;
+  font-size: 5rem;
+  text-shadow: 2px 5px orange;
+
+}
+
+.set {
+  background-image: url(../images/car.jpg);
+  background-position: center;
+  background-size: cover;
+  border: none;
+  margin: 0 auto;
+  width: 60%;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  padding: 4% 2%;
+  display: block;
+  position: absolute;
+  left: 16%;
+  z-index: 0;
+
+}
+
+@keyframes colorChangeNote {
+  0% {background-color: skyblue;}
+  25% {background-color: yellow; }
+  50% {background-color: orange; }
+  75% {background-color: red;}
+  100% {background-color: pink;}
+}
+
+.button {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  margin: 15px 15px;
+  padding: 15px auto;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  outline: none;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  z-index: 9999;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: yellow;
+}
+
+.button:active {
+  box-shadow: 0 1px grey;
+  transform: translateY(2px);
+}
+
+.note {
+  width: 200px;
+  position: fixed;
+  right: 4%;
+  outline: none;
+  border: none;
+  line-height: 150px;
+
+}
+
+.note1 {
+  padding-top: 12px;
+  animation: colorChangeNote;
+  animation-duration: 7s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.note1:hover {
+  color: black;
+}
+
+.butt {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-text {
+  visibility: hidden;
+  position: absolute;
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  z-index: 1;
+  line-height: 30px;
+  border-radius: 6px;
+  color: white;
+  background-color: black;
+  bottom: 95%;
+  left: 50%;
+  margin-left: -65px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.butt:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.butt .hover-text::after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
